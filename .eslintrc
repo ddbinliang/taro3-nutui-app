@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  // 定义全局变量
+  "globals": {
+    // 声明 jQuery 对象为全局变量
+    // "$": false, // true表示该变量为 writeable，而 false 表示 readonly, 即不可重写$
+    // "jQuery": false,
+    // "Promise": "off" // 禁用Promise
+  },
+  "parser": "vue-eslint-parser",
+  "extends": [
+    "eslint:recommended", // eslint
+    "plugin:vue/vue3-recommended", // plugin-vue
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended", // plugin-prettier
+    "eslint-config-prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    // "parser": "@babel/eslint-parser", // js解析器
+    "parser": "@typescript-eslint/parser", // ts语法解析器
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "vue",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "singleQuote": false,
+        "semi": true,
+        "trailingComma": "es5",
+        "arrowParens": "always",
+        "endOfLine": "auto",
+        "printWidth": 100
+      }
+    ],
+    "vue/multi-word-component-names": "off", // 禁用vue文件强制多个单词命名
+    "@typescript-eslint/no-explicit-any": [
+      "off"
+    ], //允许使用any
+    "@typescript-eslint/no-this-alias": [
+      "error",
+      {
+        "allowedNames": [
+          "that"
+        ] // this可用的局部变量名称
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": "off", //允许使用@ts-ignore
+    "@typescript-eslint/no-non-null-assertion": "off", //允许使用非空断言
+    // "no-console": [
+    //   //提交时不允许有console.log
+    //   "warn",
+    //   {
+    //     "allow": ["warn", "error"]
+    //   }
+    // ],
+    "no-console": 0,
+    "no-debugger": "warn" //提交时不允许有debugger
+  }
+}

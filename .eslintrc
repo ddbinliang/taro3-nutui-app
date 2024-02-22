@@ -36,12 +36,13 @@
     "prettier/prettier": [
       "error",
       {
-        "tabWidth": 2,
         "singleQuote": false,
         "semi": true,
-        "trailingComma": "es5",
-        "arrowParens": "always",
+        "bracketSpacing": true,
+        "htmlWhitespaceSensitivity": "ignore",
         "endOfLine": "auto",
+        "trailingComma": "es5",
+        "tabWidth": 2,
         "printWidth": 100
       }
     ],

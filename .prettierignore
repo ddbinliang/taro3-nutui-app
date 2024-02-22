@@ -2,3 +2,4 @@
 node_modules
 dist
 .cz-config.js
+src/index.html

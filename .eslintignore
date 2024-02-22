@@ -1,2 +1,3 @@
 # 忽略eslint检测这些文件
 .cz-config.js
+src/index.html
